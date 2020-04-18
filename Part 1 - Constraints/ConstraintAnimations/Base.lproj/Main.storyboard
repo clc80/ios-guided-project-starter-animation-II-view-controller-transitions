@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,14 +35,37 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0UB-pV-ycy">
+                                <rect key="frame" x="112.5" y="50" width="150" height="150"/>
+                                <color key="backgroundColor" red="1" green="0.82978381849315064" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0UB-pV-ycy" secondAttribute="height" multiplier="1:1" id="Yq6-aW-oB2"/>
+                                    <constraint firstAttribute="height" constant="150" id="Zvm-Z2-KnU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="0UB-pV-ycy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="FHR-VK-tbr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0UB-pV-ycy" secondAttribute="bottom" constant="50" id="PWZ-TM-7yq"/>
+                            <constraint firstItem="0UB-pV-ycy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ci8-37-EHg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bRz-Sh-86E" secondAttribute="trailing" constant="10" id="j9b-UV-zWZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bRz-Sh-86E" secondAttribute="bottom" constant="20" id="oZR-NH-5gR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="PWZ-TM-7yq"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="redView" destination="0UB-pV-ycy" id="PDa-UX-ppF"/>
+                        <outlet property="redViewAspectRatioConstraint" destination="Yq6-aW-oB2" id="HRU-K2-mxM"/>
+                        <outlet property="redViewBottomConstraint" destination="PWZ-TM-7yq" id="kwC-g2-ORv"/>
+                        <outlet property="redViewHeightConstraint" destination="Zvm-Z2-KnU" id="IZ3-Z0-JZi"/>
+                        <outlet property="redViewTopConstraint" destination="FHR-VK-tbr" id="gwj-a6-0LS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
